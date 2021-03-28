@@ -1,0 +1,24 @@
+// we can reference to Express module using "express" variable. When a module name is provided without path, require() function checks the node_modules folder for the dependency by default. "express" is function, not variable.
+
+// const sum = function(x,y) {return x + y;}
+var express = require("express");
+
+// create Express application and make reference to it.
+var app = express();
+
+// Listen for connections. Returns http.Server
+//  server will listen port=3000
+const port = 3000;
+
+const callbackOnGet = function (request, response) {
+    response.send("Hello World0000000000");
+};
+
+app.get("/", callbackOnGet);
+
+// callback 0
+const callbackOnStart = function () {
+  console.log("Start listening on port 3000!");
+};
+
+app.listen(port, callbackOnStart);
