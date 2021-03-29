@@ -6,12 +6,16 @@ var express = require("express");
 // create Express application and make reference to it.
 var app = express();
 
+// we need to tell Express to use our public folder to serve static files.
+app.use(express.static("PUBLIC"));
+
 // Listen for connections. Returns http.Server
 //  server will listen port=3000
 const port = 3000;
 
-const callbackOnGet = function (request, response) {
-    response.send("Hello World0000000000");
+const callbackOnGet = function (req, res) {
+  //res.send("прЮвет волку");
+   res.sendFile("PUBLIC/Main.html");
 };
 
 app.get("/", callbackOnGet);
