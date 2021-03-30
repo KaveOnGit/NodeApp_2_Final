@@ -11,7 +11,7 @@ app.use(express.static("PUBLIC"));
 
 // Listen for connections. Returns http.Server
 //  server will listen port=3000
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 const callbackOnGet = function (req, res) {
   //res.send("прЮвет волку");
@@ -23,7 +23,7 @@ app.get("/", callbackOnGet);
 
 // callback 0
 const callbackOnStart = function () {
-  console.log("Start listening on port 3000!");
+  console.log(`Start listening on port ${port} ..... `);
 };
 
 app.listen(port, callbackOnStart);
