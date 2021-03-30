@@ -11,11 +11,12 @@ app.use(express.static("PUBLIC"));
 
 // Listen for connections. Returns http.Server
 //  server will listen port=3000
-const port = 3000;
+const port = process.env.port || 3000;
 
 const callbackOnGet = function (req, res) {
   //res.send("прЮвет волку");
-   res.sendFile("PUBLIC/Main.html");
+  //res.sendfile("PUBLIC/Main.html");
+  res.sendFile(__dirname + '/PUBLIC/Main.html');
 };
 
 app.get("/", callbackOnGet);
