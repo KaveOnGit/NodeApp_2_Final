@@ -1,0 +1,39 @@
+doctype html
+head
+  title #{titleText}
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
+  style.
+    body {
+    background-image: url("wood.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+    h1, h3{
+    color: white;
+    }
+nav.navbar.navbar-inverse
+  .container-fluid
+    .navbar-header
+      a.navbar-brand(href='#') WebSiteName
+    ul.nav.navbar-nav
+      li
+        a(href='./Home.html') Home  
+      li
+        a(href='./Main.html') Main
+      li
+        a(href='#') Pug
+      li
+        a(href='https://html-to-pug.com/') Convert HTML to Pug
+
+img.img-responsive(src='pug.svg' height='70' width='70')
+
+h1 #{pugDefinition}
+h3 #{pugAlternatives1}
+h3 #{pugAlternatives2}
+h3 #{pugAlternatives3}
+h3 #{pugAlternatives4}
+h1 #{expressAlternatives}
+
+
